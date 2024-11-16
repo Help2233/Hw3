@@ -112,7 +112,7 @@ public class Main {
         float kristinaNewAnnualIncome = (raisingKristina + kristina) * 12;
         System.out.println("старый годовой доход Кристины состовлял " + kristinaAnnualIncome + " рублей, а новый состовляет " + kristinaNewAnnualIncome + " рублей");
         float differenceKristina = kristinaNewAnnualIncome - kristinaAnnualIncome;
-        System.out.println("Кристина теперь получает в год  " + kristinaNewAnnualIncome + " рублей. Годовой доход вырос на " + differenceKristina + " рублей");
+        System.out.println("Кристина теперь получает в год  " + kristinaNewAnnualIncome + " рублей. Годовой доход вырос на " + differenceKristina + " рублей"); 
 
 
     }}
