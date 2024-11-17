@@ -5,17 +5,17 @@ public class Main {
         System.out.println("Задание номер 1");
 
         byte a = 26;
-        System.out.println(a);
+        System.out.println("Значение переменной a с типом byte равно " + a);
         short b = -1324;
-        System.out.println(b);
+        System.out.println("Значение переменной b с типом short равно " + b);
         int c = 1003543;
-        System.out.println(c);
+        System.out.println("Значение переменной c с типом int равно " + c);
         long d = 1304242844L;
-        System.out.println(d);
+        System.out.println("Значение переменной d с типом long равно " + d);
         float e = 443.3424533f;
-        System.out.println(e);
+        System.out.println("Значение переменной e с типом float равно " + e);
         double g = 24525.247259259432856;
-        System.out.println(g);
+        System.out.println("Значение переменной g с типом double равно " + g);
 
         System.out.println("Задание номер 2 ");
 
@@ -29,26 +29,26 @@ public class Main {
 
         System.out.println("Задание номер 3 ");
 
-        short lyudmilaPavlovna = 23;
-        short annaSergeevna = 27;
-        short ekaterinaAndreevna = 30;
-        short totalPaper = 480;
-        short allStudents = (short) (lyudmilaPavlovna + annaSergeevna + ekaterinaAndreevna);
+        int lyudmilaPavlovna = 23;
+        int annaSergeevna = 27;
+        int ekaterinaAndreevna = 30;
+        int totalPaper = 480;
+        int allStudents = lyudmilaPavlovna + annaSergeevna + ekaterinaAndreevna;
         System.out.println("На каждого ученика рассчитано " + totalPaper / allStudents + " листов бумаги");
 
         System.out.println("Задание номер 4");
 
-        int machinePerformance2 = 16;
-        int time2 = 2;
-        int time20 = 20;
-        int machinePerformance1 = machinePerformance2 / time2;
-        System.out.println("За " + time20 + " минут машина произвела " + machinePerformance1 * time20 + " штук бутылок");
-        int hours24 = 24 * 60;
-        System.out.println("За " + hours24 + " минут машина произвела " + machinePerformance1 * hours24 + " штук бутылок");
-        int days3 = hours24 * 3;
-        System.out.println("За " + days3 + " минут машина произвела " + machinePerformance1 * days3 + " штук бутылок");
-        int month1 = 30 * hours24;
-        System.out.println("За " + month1 + " минут машина произвела " + machinePerformance1 * month1 + " штук бутылок");
+        int machinePerformanceTwo = 16;
+        int timeTwo = 2;
+        int timeTwenty = 20;
+        int machinePerformanceOne = machinePerformanceTwo / timeTwo;
+        System.out.println("За " + timeTwenty + " минут машина произвела " + machinePerformanceOne * timeTwenty + " штук бутылок");
+        int hoursTwentyFour = 24 * 60;
+        System.out.println("За " + hoursTwentyFour + " минут машина произвела " + machinePerformanceOne * hoursTwentyFour + " штук бутылок");
+        int daysThree = hoursTwentyFour * 3;
+        System.out.println("За " + daysThree + " минут машина произвела " + machinePerformanceOne * daysThree + " штук бутылок");
+        int monthOne = 30 * hoursTwentyFour;
+        System.out.println("За " + monthOne + " минут машина произвела " + machinePerformanceOne * monthOne + " штук бутылок");
 
         System.out.println("Задача номер 5");
 
