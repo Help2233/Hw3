@@ -28,14 +28,14 @@ public class Main {
 
         System.out.println("Задча номер 4");
 
-       int theAgeOfThePerson = 16;
+       int theAgeOfThePerson = 7;
        if (theAgeOfThePerson >= 2 && theAgeOfThePerson <=6) {
            System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то ему нужно ходить в детский сад.");
        }
-        if (theAgeOfThePerson > 7 && theAgeOfThePerson <=17) {
+        if (theAgeOfThePerson >= 7 && theAgeOfThePerson <=17) {
             System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то ему нужно ходить в школу");
         }
-        if (theAgeOfThePerson >= 18 && theAgeOfThePerson < 24) {
+        if (theAgeOfThePerson >= 18 && theAgeOfThePerson <= 24) {
             System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то его место в университете");
         }
         if (theAgeOfThePerson > 24) {
@@ -47,7 +47,7 @@ public class Main {
         if (ageOfTheChild < 5) {
             System.out.println("Если возраст ребенка равен " + ageOfTheChild + ", то ему нельзя кататься на аттракционе");
         }
-        if (ageOfTheChild > 5 && ageOfTheChild < 14) {
+        if (ageOfTheChild >= 5 && ageOfTheChild <= 14) {
             System.out.println("Если возраст ребенка равен " + ageOfTheChild + ", то ему можно кататься на аттракционе в сопровождении взрослого");
         }
         if (ageOfTheChild > 14) {
