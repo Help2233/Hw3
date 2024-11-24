@@ -1,87 +1,81 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Задача номер 1");
+        System.out.println("Задание номер 1");
 
-      int age = 21;
-       if (age >= 18) {
-           System.out.println("Если возраст человека равен " + age + " он совершеннолетний");
-       } else {
-           System.out.println("Если возраст человека равен " + age + " он не достиг совершеннолетия, нужно немного подождать");
-       }
+        int clientOS = 0;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 0) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
 
-        System.out.println("Задача номер 2 ");
+        System.out.println("Задача номер 2");
 
-       int temperature = 2;
-       if (temperature < 5 || temperature > 5) {
-           System.out.println("На улице " + temperature + " градусов, нужно надеть шапку");
-       } else {
-        System.out.println("На улице " + temperature + " градусов, можно идти без шапки"); }
+        int clientDeviceYear = 2014;
+        if (clientDeviceYear < 2015 && clientOS == 1) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 1)
+            System.out.println("Установите обычную версию приложения для iOS по ссылке");
+        if (clientDeviceYear <= 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println("Установите обычную версию приложения для Android по ссылке");
+        }
 
-        System.out.println("Задача номер 3");
+        System.out.println("Задание номер 3");
 
-       int speed = 76;
-       if (speed > 60 || speed < 60) {
-           System.out.println("Если скорость " + speed + " то придется заплатить штраф");
-       }else {
-           System.out.println("Если скорость " + speed + " можно ездить спокойно"); }
+        int year = 2538;
+        if (year > 1584 && (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))) {
+            System.out.println("Год является високосным");
+        } else {
+            System.out.println("Год не является високосным");
+        }
 
         System.out.println("Задча номер 4");
 
-       int theAgeOfThePerson = 7;
-       if (theAgeOfThePerson >= 2 && theAgeOfThePerson <=6) {
-           System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то ему нужно ходить в детский сад.");
-       }
-        if (theAgeOfThePerson >= 7 && theAgeOfThePerson <=17) {
-            System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то ему нужно ходить в школу");
+        int deliveryDistance = 95;
+        int deliveryTime = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Срок доставки" + deliveryTime + " день");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Срок доставки " + (deliveryTime + 1) + " дня");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Срок доставки " + (deliveryTime + 2) + " дня");
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
         }
-        if (theAgeOfThePerson >= 18 && theAgeOfThePerson <= 24) {
-            System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то его место в университете");
-        }
-        if (theAgeOfThePerson > 24) {
-            System.out.println("Если возраст человека равен " + theAgeOfThePerson + " , то ему пора ходить на работу");
-        }
+
         System.out.println("Задача номер 5");
 
-        int ageOfTheChild = 7;
-        if (ageOfTheChild < 5) {
-            System.out.println("Если возраст ребенка равен " + ageOfTheChild + ", то ему нельзя кататься на аттракционе");
+        int monthNumber = 12;
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Весна");
+                break;
+            default:
+                System.out.println("Такого времени года нет");
         }
-        if (ageOfTheChild >= 5 && ageOfTheChild <= 14) {
-            System.out.println("Если возраст ребенка равен " + ageOfTheChild + ", то ему можно кататься на аттракционе в сопровождении взрослого");
-        }
-        if (ageOfTheChild > 14) {
-            System.out.println("Если возраст ребенка равен " + ageOfTheChild + ", то ему можно кататься на аттракционе без сопровождения взрослого");
-        }
-
-        System.out.println("Задача номер 6");
-
-        int ticketNumber = 67;
-        if (ticketNumber < 60) {
-            System.out.println("Есть сидячие место");
-        } else
-            if (ticketNumber > 60 && ticketNumber < 102 ) {
-                System.out.println("Есть стоячие места");
-            } else if ( ticketNumber > 102)  {
-                System.out.println("Нет мест в вагоне");
-
-        }
-
-        System.out.println("Задача номер 7");
-
-            int one = 16;
-            int two = 432;
-            int three = 3;
-            if ( one > two && one > three) {
-                System.out.println("Число " + one + " больше всех");
-            } else if (two > one && two > three) {
-                System.out.println("Число " + two + " больше всех");
-            } else {
-                System.out.println("Число " + three + " больше всех");
-            }
 
 
-
-    }}
+    }
+}
 
 
