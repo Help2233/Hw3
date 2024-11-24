@@ -4,7 +4,7 @@ public class Main {
         System.out.println("Задание номер 1");
 
         int clientOS = 0;
-        if (clientOS == 1) {
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 0) {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Задание номер 3");
 
         int year = 2538;
-        if (year > 1584 && (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))) {
+        if (year > 1584 && (year % 4 == 0 || (year % 400 == 0 && year % 100 == 0))) {
             System.out.println("Год является високосным");
         } else {
             System.out.println("Год не является високосным");
