@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задача номер 1");
 
-        int accumulation = 15000;
+        int accumuLation = 15000;
         int total = 0;
         int month = 0;
         while (total < 2_459_000) {
             month++;
-            total = total + accumulation;
+            total = total + accumuLation;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
 
@@ -21,7 +21,7 @@ public class Main {
             System.out.print(a + " ");
         }
         System.out.println();
-        for (a = 1; a <= 10; a++) {
+        for (a = 10; a >= 1; a--) {
             System.out.print(a + " ");
         }
         System.out.println();
@@ -66,11 +66,9 @@ public class Main {
 
         System.out.println("Задача номер 7");
 
-        int friday = 1;
-        int day = 31;
-        while (day >= friday) {
-            System.out.println("Сегодня пятница, " + friday + "-е число.");
-            friday = friday + 7;
+        int firstDay = 3;
+        for (int day = firstDay; day <= 31; day += 7) {
+            System.out.println("Сегодня пятница, " + day + "-е число.");
         }
 
         System.out.println("Задание номер 8");
