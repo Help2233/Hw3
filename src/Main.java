@@ -3,80 +3,53 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задача номер 1 и 2");
 
-        int[] anIntegerArray = new int[]{1, 2, 3};
-        for (int q = 0; q < anIntegerArray.length; q++) {
-            System.out.print(anIntegerArray[q]);
-            if (q < anIntegerArray.length - 1) {
-                System.out.print(",");
+        System.out.println("Задача номер 1 и 2 и 3");
+        int[] theAmountOfExpenses = new int[5];
+        int costsPerMonth = 0;
+        int maximumExpenditure = -1;
+        theAmountOfExpenses[0] = 15000;
+        theAmountOfExpenses[1] = 14454;
+        theAmountOfExpenses[2] = 13141;
+        theAmountOfExpenses[3] = 32424;
+        theAmountOfExpenses[4] = 24255;
+        for (int w = 0; w < theAmountOfExpenses.length; w++) {
+            costsPerMonth += theAmountOfExpenses[w];
+        }
+        System.out.println("Сумма трат за месяц составила " + costsPerMonth + " рублей");
+
+        for (int i = 0; i < theAmountOfExpenses.length; i++) {
+            if (theAmountOfExpenses[i] > maximumExpenditure) {
+                maximumExpenditure = theAmountOfExpenses[i];
             }
+
         }
+        System.out.println("Максимальный расход за неделю состовляет " + maximumExpenditure);
 
-        System.out.println();
-
-        double[] fractionalArray = {1.57, 7.654, 9.986};
-        for (int q = 0; q < fractionalArray.length; q++) {
-            System.out.print(fractionalArray[q]);
-            if (q < fractionalArray.length - 1) {
-                System.out.print(",");
+        for (int i = 0; i < theAmountOfExpenses.length; i++) {
+            if (theAmountOfExpenses[i] < maximumExpenditure) {
+                maximumExpenditure = theAmountOfExpenses[i];
             }
-        }
-        System.out.println();
 
-        int[] anArbitraryArray = new int[13];
-        for (int q = 0; q < anArbitraryArray.length; q++) {
-            anArbitraryArray[q] = q * 10;
         }
-        for (int q = 0; q < anArbitraryArray.length; q++) {
-            System.out.print(anArbitraryArray[q]);
-            if (q < anArbitraryArray.length - 1) {
-                System.out.print(",");
-            }
+        System.out.println("Минимальный расход за неделю состовляет " + maximumExpenditure);
+        int sum = 0;
+        for (int w : theAmountOfExpenses) {
+            sum += w;
         }
-        System.out.println();
+        double average = (double) sum / theAmountOfExpenses.length - 1;
+        System.out.println("средний расход за неделю составляет " + average);
 
-        System.out.println("Задача номер 3");
 
-        int[] namber = new int[]{1, 2, 3};
-        for (int q = namber.length - 1; q >= 0; q--) {
-            System.out.print(namber[q]);
-            if (q > 0) {
-                System.out.print(",");
-            }
-        }
-        System.out.println();
+        System.out.println("Задание номер 4");
 
-        double[] namberOne = {1.57, 7.654, 9.986};
-        for (int q = namberOne.length - 1; q >= 0; q--) {
-            System.out.print(namberOne[q]);
-            if (q > 0) {
-                System.out.print(",");
-            }
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char a = 0;
+        for (int w = reverseFullName.length - 1; w >= 0; w--) {
+            a += reverseFullName[w];
+            System.out.print(reverseFullName[w]);
         }
-        System.out.println();
 
-        int[] namberTwo = new int[13];
-        for (int q = 0; q < namberTwo.length; q++) {
-            namberTwo[q] = q * 10;
-        }
-        for (int q = namberTwo.length - 1; q >= 0; q--) {
-            System.out.print(namberTwo[q]);
-            if (q > 0) {
-                System.out.print(",");
-            }
-        }
-        System.out.println();
-
-        System.out.println("Зaдание номер 4");
-
-        int[] array = {1, 2, 3};
-        for (int y = 0; y < array.length; y++) {
-            if (array[y] % 2 != 0) {
-                array[y] = array[y] + 1;
-            }
-        }
-        System.out.print(Arrays.toString(array));
 
     }
 }
