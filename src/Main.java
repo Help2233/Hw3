@@ -50,6 +50,5 @@ public class Main {
             reverseFullName[reverseFullName.length - 1 - i] = (char) temp;
         }
         System.out.println(reverseFullName);
-
     }
 }
