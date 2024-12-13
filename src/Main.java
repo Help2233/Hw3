@@ -22,34 +22,34 @@ public class Main {
             if (theAmountOfExpenses[i] > maximumExpenditure) {
                 maximumExpenditure = theAmountOfExpenses[i];
             }
-
         }
         System.out.println("Максимальный расход за неделю состовляет " + maximumExpenditure);
 
-        for (int i = 0; i < theAmountOfExpenses.length; i++) {
-            if (theAmountOfExpenses[i] < maximumExpenditure) {
-                maximumExpenditure = theAmountOfExpenses[i];
+        int min = theAmountOfExpenses[0];
+        for (int i = 1; i < theAmountOfExpenses.length; i++) {
+            if (theAmountOfExpenses[i] < min) {
+                min = theAmountOfExpenses[i];
             }
-
         }
-        System.out.println("Минимальный расход за неделю состовляет " + maximumExpenditure);
+        System.out.println("Минимальный расход за неделю состовляет " + min);
+
         int sum = 0;
         for (int w : theAmountOfExpenses) {
             sum += w;
         }
-        double average = (double) sum / theAmountOfExpenses.length - 1;
+        double average = (double) sum / theAmountOfExpenses.length;
         System.out.println("средний расход за неделю составляет " + average);
-
 
         System.out.println("Задание номер 4");
 
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        char a = 0;
-        for (int w = reverseFullName.length - 1; w >= 0; w--) {
-            a += reverseFullName[w];
-            System.out.print(reverseFullName[w]);
+        int temp;
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
+            reverseFullName[reverseFullName.length - 1 - i] = (char) temp;
         }
-
+        System.out.println(reverseFullName);
 
     }
 }
