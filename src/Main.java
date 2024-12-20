@@ -29,18 +29,27 @@ public class Main {
 
     }
 
-    public static void DeliveryTime(int deliveryDistance, int deliveryTime) {
+    public static int DeliveryTime(int deliveryDistance) {
         if (deliveryDistance <= 20) {
-            System.out.println("Срок доставки " + deliveryTime + " день");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            System.out.println("Срок доставки " + (deliveryTime + 1) + " дня");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Срок доставки " + (deliveryTime + 2) + " дня");
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
+            return 1;
+        } else if (deliveryDistance <= 60) {
+            return 2;
+        } else if (deliveryDistance <= 100) {
+            return 3;
+        } else {
+            return -1;
         }
-
     }
+
+    private static void printCardDeliveryDays(int distance) {
+        int days = DeliveryTime(distance);
+        if (days > 0) {
+            System.out.println("Потребуется дней: " + days);
+        } else {
+            System.out.println("Доставка не осуществляется");
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -53,10 +62,10 @@ public class Main {
         installingTheApplication(clientOS);
 
         System.out.println("Задача номер 3");
+        printCardDeliveryDays(95);
 
-        int deliveryDistance = 95;
-        int deliveryTime = 1;
-        DeliveryTime(deliveryDistance,deliveryTime);
+
+
     }
 }
 
