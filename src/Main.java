@@ -2,72 +2,41 @@
 import java.util.Arrays;
 
 public class Main {
-    public static void leapYear(int year) {
-        if (year > 1584 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0 && year % 100 == 0)) {
-            System.out.println(year + " Год является високосным");
-        } else {
-            System.out.println(year + " год не является високосным");
-        }
-    }
 
-    public static void installingTheApplication(int clientOS) {
-        if (clientOS == 1) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 0) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }
-        int clientDeviceYear = 2014;
-        if (clientDeviceYear <= 2015 && clientOS == 1) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientDeviceYear >= 2015 && clientOS == 1)
-            System.out.println("Установите обычную версию приложения для iOS по ссылке");
-        if (clientDeviceYear <= 2015 && clientOS == 0) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
-            System.out.println("Установите обычную версию приложения для Android по ссылке");
-        }
-
-    }
-
-    public static int DeliveryTime(int deliveryDistance) {
-        if (deliveryDistance <= 20) {
-            return 1;
-        } else if (deliveryDistance <= 60) {
-            return 2;
-        } else if (deliveryDistance <= 100) {
-            return 3;
-        } else {
-            return -1;
-        }
-    }
-
-    private static void printCardDeliveryDays(int distance) {
-        int days = DeliveryTime(distance);
-        if (days > 0) {
-            System.out.println("Потребуется дней: " + days);
-        } else {
-            System.out.println("Доставка не осуществляется");
-        }
-    }
 
 
     public static void main(String[] args) {
+        Book learningJava = new Book("Изучение Java", "Сьерра К., Бэйтс Б.", 2023);
+        String theNameOfTheBook = "Изучение Java";
+        String author = "Сьерра К., Бэйтс Б.";
+        int yearOfPublication = 2023;
+        String name = "Кэтти и Берт";
+        String surname = "Сьерра и Бейтс";
+        System.out.println("learningJava.theNameOfTheBook = " + learningJava.getTheNameOfTheBook());
+        System.out.println("learningJava.author = " + learningJava.author);
+        System.out.println("learningJava.getYearOfPublication() = " + learningJava.getYearOfPublication());
+        learningJava.setYearOfPublication(2024);
+        System.out.println("learningJava.getYearOfPublication() = " + learningJava.getYearOfPublication());
 
-        System.out.println("Задача номер 1");
-        int year = 2024;
-        leapYear(year);
+        Author king = new Author("Кэтти и Берт", "Сьерра и Бейтс");
+        System.out.println("name = " + king.getName());
+        System.out.println("surname = " + king.getSurname());
 
-        System.out.println("Задача номер 2");
-        int clientOS = 1;
-        installingTheApplication(clientOS);
+        Book dataStructuresAndAlgorithmsInJava = new Book("Структуры данных и алгоритмы в Java", "Лафоре Р.",2019 );
+        System.out.println("dataStructuresAndAlgorithmsInJava.getTheNameOfTheBook() = " + dataStructuresAndAlgorithmsInJava.getTheNameOfTheBook());
+        System.out.println("dataStructuresAndAlgorithmsInJava.getAuthor() = " + dataStructuresAndAlgorithmsInJava.getAuthor());
+        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
+        dataStructuresAndAlgorithmsInJava.setYearOfPublication(2022);
+        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
 
-        System.out.println("Задача номер 3");
-        printCardDeliveryDays(95);
-
+        Book javaProgrammingForBeginners = new Book("Программирование на Java для начинающих", "Васильев А.Н.", 2024);
+        System.out.println("javaProgrammingForBeginners.getTheNameOfTheBook() = " + javaProgrammingForBeginners.getTheNameOfTheBook());
+        System.out.println("javaProgrammingForBeginners.getAuthor() = " + javaProgrammingForBeginners.getAuthor());
+        System.out.println("javaProgrammingForBeginners.getYearOfPublication() = " + javaProgrammingForBeginners.getYearOfPublication());
+        dataStructuresAndAlgorithmsInJava.setYearOfPublication(2020);
+        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
 
 
     }
 }
-
-
 
