@@ -6,35 +6,21 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Book learningJava = new Book("Изучение Java", new Author("Кэтти и Берт", "Сьерра К., Бэйтс Б."), 2023);
-        String theNameOfTheBook = "Изучение Java";
-        int yearOfPublication = 2023;
-        String name = "Кэтти и Берт";
-        String surname = "Сьерра и Бейтс";
-        System.out.println("learningJava.theNameOfTheBook = " + learningJava.getTheNameOfTheBook());
-        System.out.println("learningJava.getAuthor() = " + learningJava.getAuthor());
-        System.out.println("learningJava.getYearOfPublication() = " + learningJava.getYearOfPublication());
-        learningJava.setYearOfPublication(2024);
-        System.out.println("learningJava.getYearOfPublication() = " + learningJava.getYearOfPublication());
-
-        Author author = new Author("Кэтти и Берт", "Сьерра и Бейтс");
-        System.out.println("name = " + author.getName());
-        System.out.println("surname = " + author.getSurname());
-
-        Book dataStructuresAndAlgorithmsInJava = new Book("Структуры данных и алгоритмы в Java", new Author("розе", "Лафоре"),2019 );
-        System.out.println("dataStructuresAndAlgorithmsInJava.getTheNameOfTheBook() = " + dataStructuresAndAlgorithmsInJava.getTheNameOfTheBook());
-        System.out.println("dataStructuresAndAlgorithmsInJava.getAuthor() = " + dataStructuresAndAlgorithmsInJava.getAuthor());
-        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
-        dataStructuresAndAlgorithmsInJava.setYearOfPublication(2022);
-        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
-
-        Book javaProgrammingForBeginners = new Book("Программирование на Java для начинающих", new Author(" Андрей", "Васильев"), 2024);
-        System.out.println("javaProgrammingForBeginners.getTheNameOfTheBook() = " + javaProgrammingForBeginners.getTheNameOfTheBook());
-        System.out.println("javaProgrammingForBeginners.getAuthor() = " + javaProgrammingForBeginners.getAuthor());
-        System.out.println("javaProgrammingForBeginners.getYearOfPublication() = " + javaProgrammingForBeginners.getYearOfPublication());
-        dataStructuresAndAlgorithmsInJava.setYearOfPublication(2020);
-        System.out.println("dataStructuresAndAlgorithmsInJava.getYearOfPublication() = " + dataStructuresAndAlgorithmsInJava.getYearOfPublication());
-
+        String title = "Гарри Поттер и узник Азкаба";
+        Author author = new Author();
+        Author authorOne = new Author("Джоан", "Роулинг");
+        Author authorTwo = new Author("Мишель", "Пейвер");
+        Author authorThree = new Author("Стивен", "Кинг");
+        System.out.println(authorOne);
+        Book book = new Book("Гарри Поттер и узник Азкаба", authorOne, 2021);
+        book.setYear(2020);
+        Book bookOne = new Book("Гарри Поттер и Принц-полукровка", authorTwo, 2005);
+        bookOne.setYear(2010);
+        Book bookThree = new Book("Зелёная миля", authorThree, 2022);
+        bookThree.setYear(2024);
+        System.out.println(book);
+        System.out.println(bookOne);
+        System.out.println(bookThree);
 
     }
 }
