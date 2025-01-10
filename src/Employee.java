@@ -1,7 +1,7 @@
 public class Employee {
     private static int idGenerator = 1;
 
-    private final String  fullName;
+    private final String fullName;
     private int department;
     private double salary;
     private final int id;

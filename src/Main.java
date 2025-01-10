@@ -1,7 +1,6 @@
 public class Main {
     private static Employee[] employee = new Employee[10];
 
-
     public static void main(String[] args) {
         employee[0] = new Employee("Петров Евгений Васильевич", 1, 60000);
         employee[1] = new Employee("Леженин Людмила Валерьевна", 2, 70000);
@@ -27,7 +26,6 @@ public class Main {
 
         }
     }
-
 
     private static int theAmountOfExpenses() {
         int sum = 0;
