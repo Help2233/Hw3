@@ -12,22 +12,22 @@ public class Main {
         employee[7] = new Employee("Сухоруков Виктор Данилович", 3, 85000);
         employee[8] = new Employee("Куторкин Евгений Анатольевич", 4, 95000);
         employee[9] = new Employee("Зотов Вадим Кириллович", 5, 105000);
-        print();
-        System.out.println("Сумма ЗП сотрудников " + theAmountOfExpenses());
+        listOfEmployees();
+        System.out.println("Сумма ЗП сотрудников " + totalSpent());
         System.out.println("Сотрудник с минимальной ЗП " + minimumWage());
         System.out.println("Сотрудник с максимальной ЗП " + maximumWage());
         System.out.println("Средняя ЗП сотрудников " + averageSalary());
         printFullNames();
     }
 
-    private static void print() {
+    private static void listOfEmployees() {
         for (Employee employees : employee) {
             System.out.println(employees);
 
         }
     }
 
-    private static int theAmountOfExpenses() {
+    private static int totalSpent() {
         int sum = 0;
         for (Employee employees : employee) {
             sum += employees.getSalary();
@@ -56,7 +56,7 @@ public class Main {
     }
 
     private static double averageSalary() {
-        return (double) theAmountOfExpenses() / employee.length;
+        return (double) totalSpent() / employee.length;
     }
 
     private static void printFullNames() {

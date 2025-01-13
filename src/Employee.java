@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
     private static int idGenerator = 1;
 
@@ -36,6 +38,22 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public static void setIdGenerator(int idGenerator) {
+        Employee.idGenerator = idGenerator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee1 = (Employee) o;
+        return department == employee1.department && Double.compare(salary, employee1.salary) == 0 && id == employee1.id && Objects.equals(fullName, employee1.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, department, salary, id);
     }
 
     @Override
