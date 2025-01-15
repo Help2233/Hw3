@@ -65,17 +65,12 @@ public class Main {
         }
     }
 
-    public static Employee[] indexation(double percent) {
-        double salaryIndexation;
+    public static void indexation() {
         for (int i = 0; i < employee.length; i++) {
-            salaryIndexation = employee[i].getSalary() + employee[i].getSalary() * percent / 100;
-            employee[i].setSalary(salaryIndexation);
-            System.out.println(employee[i]);
+            employee[i].setSalary((int) (employee[i].getSalary() + employee[i].getSalary() * 0.15));
+
         }
-        return employee;
     }
-
-
 }
 
 
