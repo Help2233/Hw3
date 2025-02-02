@@ -40,7 +40,7 @@ public class App {
         System.out.println(basket.isProductInCart("груша"));
 
     }
-    }
+}
 
 
 
