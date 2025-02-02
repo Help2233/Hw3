@@ -1,6 +1,11 @@
 public class Main {
     private static Employee[] employee = new Employee[10];
 
+ dz12
+import java.util.Arrays;
+import java.util.Locale;
+
+public class Main {
     public static void main(String[] args) {
         employee[0] = new Employee("Петров Евгений Васильевич", 1, 60000);
         employee[1] = new Employee("Леженин Людмила Валерьевна", 2, 70000);
@@ -64,10 +69,32 @@ public class Main {
             System.out.println(employees.getFullName());
         }
     }
+dz11
 
     public static void indexation() {
         for (int i = 0; i < employee.length; i++) {
             employee[i].setSalary((int) (employee[i].getSalary() + employee[i].getSalary() * 0.15));
+
+dz12
+    public static void main(String[] args) {
+        String title = "Гарри Поттер и узник Азкаба";
+        Author author = new Author();
+        Author authorOne = new Author("Джоан", "Роулинг");
+        Author authorTwo = new Author("Мишель", "Пейвер");
+        Author authorThree = new Author("Стивен", "Кинг");
+        System.out.println(authorOne);
+        Book book = new Book("Гарри Поттер и узник Азкаба", authorOne, 2021);
+        book.setYear(2020);
+        Book bookOne = new Book("Гарри Поттер и Принц-полукровка", authorTwo, 2005);
+        bookOne.setYear(2010);
+        Book bookThree = new Book("Зелёная миля", authorThree, 2022);
+        bookThree.setYear(2024);
+        System.out.println(book);
+        System.out.println(bookOne);
+        System.out.println(bookThree);
+
+    }
+}
 
         }
     }
@@ -81,3 +108,4 @@ public class Main {
 
 
 
+ dz11
