@@ -4,7 +4,6 @@ public class Product {
     private String product;
     private int cost;
 
-
     public int getCost() {
         return cost;
     }

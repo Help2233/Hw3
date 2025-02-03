@@ -12,7 +12,7 @@ public class ProductBasket {
                 return;
             }
         }
-        System.out.println("Места нет");
+        System.out.println("Места нет.");
     }
 
     public int getAllPrice() {
