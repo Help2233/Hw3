@@ -38,16 +38,16 @@ public class ProductBasket {
         for (int i = 0; i < products.length; i++) {
             products[i] = null;
         }
-        products.clone(); // Чистим список
     }
 
     public void printCart() {
-        for (Product product : products ){
+        for (Product product : products) {
             if (product != null) {
-                System.out.println(product.getProduct());
-            } else {
-                System.out.println("null");
+                System.out.println(product);
+
             }
         }
+        System.out.println("Всего: " + getAllPrice());
     }
+
 }

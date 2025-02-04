@@ -24,18 +24,18 @@ public class App {
         System.out.println(productThree.getProduct() + ": " + productThree.getCost() + "руб.");
         System.out.println(productFour.getProduct() + ": " + productFour.getCost() + "руб.");
         System.out.println(productFive.getProduct() + ": " + productFive.getCost() + "руб.");
-        System.out.println("Итого: " + basket.getAllPrice() + "руб.");
 
         System.out.println(basket.isProductInCart("помидоры"));
         System.out.println(basket.isProductInCart("груша"));
 
         ProductBasket cart = new ProductBasket();
         System.out.println("Корзина до очистки:");
+
         basket.printCart();
         basket.clearCart();
         System.out.println("Корзина после очистки:");
         basket.printCart();
-        System.out.println("Итого: " + basket.getAllPrice() + "руб.");
+
         System.out.println(basket.isProductInCart("помидоры"));
         System.out.println(basket.isProductInCart("груша"));
 

@@ -2,7 +2,7 @@
 package rg.skypro.skyshop.product;
 
 public class Product {
-    private String product;
+    private String name;
     private int cost;
 
 
@@ -11,11 +11,11 @@ public class Product {
     }
 
     public String getProduct() {
-        return product;
+        return name;
     }
 
     public void setProduct(String product) {
-        this.product = product;
+        this.name = product;
     }
 
     public void setCost(int cost) {
@@ -26,7 +26,13 @@ public class Product {
     }
 
     public Product(String product, int cost) {
-        this.product = product;
+        this.name = product;
         this.cost = cost;
     }
+
+    @Override
+    public String toString() {
+        return name + ": " + cost + " руб.";
+    }
 }
+
