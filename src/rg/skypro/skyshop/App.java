@@ -10,7 +10,7 @@ public class App {
         Product productTwo = new Product("макароны", 103);
         Product productThree = new Product("лимонад", 164);
         Product productFour = new Product("колбаса", 324);
-        Product productFive = new Product("помидоры", 234);
+        Product productFive = new Product("помидор", 234);
         Product productSix = new Product("яйца", 153);
         basket.addProduct(productOne);
         basket.addProduct(productTwo);
@@ -25,8 +25,8 @@ public class App {
         System.out.println(productFour.getProduct() + ": " + productFour.getCost() + "руб.");
         System.out.println(productFive.getProduct() + ": " + productFive.getCost() + "руб.");
 
-        System.out.println(basket.isProductInCart("помидоры"));
-        System.out.println(basket.isProductInCart("груша"));
+       basket.isProductInCart("помидор");
+        basket.isProductInCart("груша");
 
         ProductBasket cart = new ProductBasket();
         System.out.println("Корзина до очистки:");
@@ -36,8 +36,9 @@ public class App {
         System.out.println("Корзина после очистки:");
         basket.printCart();
 
-        System.out.println(basket.isProductInCart("помидоры"));
-        System.out.println(basket.isProductInCart("груша"));
+        basket.isProductInCart("помидор");
+        basket.isProductInCart("груша");
+
 
     }
 }
