@@ -42,14 +42,14 @@ public class ProductBasket {
     }
 
     public void printCart() {
-    for (Product product : products ){
-        if (product != null) {
-            System.out.println(product.getProduct());
-        } else {
-            System.out.println("null");
+        for (Product product : products) {
+            if (product != null) {
+                System.out.println(product.getProduct());
+            } else {
+                System.out.println("null");
+            }
         }
     }
-}
 }
 
 
