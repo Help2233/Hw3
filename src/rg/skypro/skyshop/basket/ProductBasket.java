@@ -15,16 +15,6 @@ public class ProductBasket {
         System.out.println("Места нет");
     }
 
-    public int getAllPrice() {
-        int price = 0;
-        for (int i = 0; i < products.length; i++) {
-            if (products[i] != null) {
-                price = price + products[i].getCost();
-            }
-        }
-        return price;
-    }
-
     public boolean checkBasket(String productName) {
         for (Product product : products) {
             if (product != null) {
@@ -37,7 +27,7 @@ public class ProductBasket {
     }
 
     public void isProductInCart(String productName) {
-        boolean found =false;
+        boolean found = false;
         for (Product product : products) {
             if (product != null && product.getProduct().equalsIgnoreCase(productName)) {
                 found = true;
@@ -58,14 +48,19 @@ public class ProductBasket {
     }
 
     public void printCart() {
+        int totalCost = 0;
+        int count = 0;
         for (Product product : products) {
             if (product != null) {
+                totalCost = totalCost + product.getPrice();
                 System.out.println(product);
-
+                if (product.isSpecial()) {
+                    count++;
+                }
             }
         }
-        System.out.println("Всего: " + getAllPrice());
+        System.out.println("Всего: " + totalCost);
+        System.out.println("Специальных продуктов в корзине: " + count);
     }
-
-
 }
+
