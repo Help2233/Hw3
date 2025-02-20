@@ -1,14 +1,8 @@
 
 package rg.skypro.skyshop.product;
 
-public class Product {
+public abstract class Product {
     private String name;
-    private int cost;
-
-
-    public int getCost() {
-        return cost;
-    }
 
     public String getProduct() {
         return name;
@@ -18,21 +12,21 @@ public class Product {
         this.name = product;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
 
-    public Product() {
-    }
-
-    public Product(String product, int cost) {
+    public Product(String product) {
         this.name = product;
-        this.cost = cost;
+
     }
 
     @Override
     public String toString() {
-        return name + ": " + cost + " руб.";
+        return name;
     }
+
+    public String getName() {
+        return name;
+    }
+    public abstract int getPrice();
+    public abstract boolean isSpecial ();
 }
 

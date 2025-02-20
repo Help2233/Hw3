@@ -2,16 +2,20 @@ package rg.skypro.skyshop;
 
 import rg.skypro.skyshop.basket.ProductBasket;
 import rg.skypro.skyshop.product.Product;
+import rg.skypro.skyshop.product.SimpleProduct;
+import rg.skypro.skyshop.product.DiscountedProduct;
+import rg.skypro.skyshop.product.FixedPriceProduct;
+
 
 public class App {
     public static void main(String[] args) {
         ProductBasket basket = new ProductBasket();
-        Product productOne = new Product("хлеб", 54);
-        Product productTwo = new Product("макароны", 103);
-        Product productThree = new Product("лимонад", 164);
-        Product productFour = new Product("колбаса", 324);
-        Product productFive = new Product("помидор", 234);
-        Product productSix = new Product("яйца", 153);
+        DiscountedProduct productOne = new DiscountedProduct("хлеб",54, 10);
+        DiscountedProduct productTwo = new DiscountedProduct("макароны", 103, 6);
+        FixedPriceProduct productThree = new FixedPriceProduct("лимонад");
+        SimpleProduct productFour = new SimpleProduct("колбаса", 324);
+        DiscountedProduct productFive = new DiscountedProduct("помидор", 234, 20);
+        SimpleProduct productSix = new SimpleProduct("яйца", 153);
         basket.addProduct(productOne);
         basket.addProduct(productTwo);
         basket.addProduct(productThree);
@@ -19,13 +23,8 @@ public class App {
         basket.addProduct(productFive);
         basket.addProduct(productSix);
 
-        System.out.println(productOne.getProduct() + ": " + productOne.getCost() + "руб.");
-        System.out.println(productTwo.getProduct() + ": " + productTwo.getCost() + "руб.");
-        System.out.println(productThree.getProduct() + ": " + productThree.getCost() + "руб.");
-        System.out.println(productFour.getProduct() + ": " + productFour.getCost() + "руб.");
-        System.out.println(productFive.getProduct() + ": " + productFive.getCost() + "руб.");
 
-       basket.isProductInCart("помидор");
+        basket.isProductInCart("помидор");
         basket.isProductInCart("груша");
 
         ProductBasket cart = new ProductBasket();
