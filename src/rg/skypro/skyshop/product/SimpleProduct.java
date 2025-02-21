@@ -25,4 +25,18 @@ public class SimpleProduct extends Product {
         return false;
     }
 
+    @Override
+    public String searchTerm() {
+        return getName();
+    }
+
+    @Override
+    public String typeContent() {
+        return "PRODUCT";
+    }
+
+    @Override
+    public void getStringRepresentation() {
+        super.getStringRepresentation();
+    }
 }

@@ -27,5 +27,20 @@ public class DiscountedProduct extends Product {
                 " (  " + discountPercentage +
                 " % )";
     }
+
+    @Override
+    public String searchTerm() {
+        return getName();
+    }
+
+    @Override
+    public String typeContent() {
+        return "PRODUCT";
+    }
+
+    @Override
+    public void getStringRepresentation() {
+        super.getStringRepresentation();
+    }
 }
 

@@ -23,4 +23,19 @@ public class FixedPriceProduct extends Product {
         return getName() +
                 "  " + getPrice() + " руб.";
     }
+
+    @Override
+    public String searchTerm() {
+        return getName();
+    }
+
+    @Override
+    public String typeContent() {
+        return "PRODUCT";
+    }
+
+    @Override
+    public void getStringRepresentation() {
+        super.getStringRepresentation();
+    }
 }
