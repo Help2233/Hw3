@@ -8,6 +8,13 @@ public class DiscountedProduct extends Product {
         super(name);
         this.originalPrice = originalPrice;
         this.discountPercentage = discountPercentage;
+        if (originalPrice <= 0 ) {
+            throw new IllegalArgumentException("Не может быть такая цена");
+        }
+        if (discountPercentage > 100 || discountPercentage < 0) {
+            throw new IllegalArgumentException("Ошибка в скидке");
+        }
+
     }
 
     @Override

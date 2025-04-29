@@ -6,7 +6,9 @@ public class SimpleProduct extends Product {
     public SimpleProduct(String product, int cost) {
         super(product);
         this.cost = cost;
-
+        if (cost <= 0 ) {
+            throw new IllegalArgumentException("Не может быть такая цена");
+        }
     }
 
     @Override
@@ -20,8 +22,9 @@ public class SimpleProduct extends Product {
                 " " + cost +
                 " руб.";
     }
+
     @Override
-    public boolean isSpecial (){
+    public boolean isSpecial() {
         return false;
     }
 

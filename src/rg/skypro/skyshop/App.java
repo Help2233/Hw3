@@ -40,12 +40,12 @@ public class App {
         SearchEngine searchEngine = new SearchEngine(5);
 
 
-        Article one = new Article("Хлеб ржанной","Привезен из центра города");
-        Article two = new Article("Макароны спагетти","Привезены из Краснодара");
-        Article three = new Article("лимонад натахтари","Привезен из самой Турции");
-        Article four = new Article("колбаса докторская","Привезена из самово лучшего комбинта в Самаре");
-        Article five = new Article("Помидоры черри","Привезены из теплых стран");
-        Article six = new Article("яйца с6","Привезены из Кавказа, самые свежие");
+        Article one = new Article("Хлеб ржанной", "Привезен из центра города");
+        Article two = new Article("Макароны спагетти", "Привезены из Краснодара");
+        Article three = new Article("лимонад натахтари", "Привезен из самой Турции");
+        Article four = new Article("колбаса докторская", "Привезена из самово лучшего комбинта в Самаре");
+        Article five = new Article("Помидоры черри", "Привезены из теплых стран");
+        Article six = new Article("яйца с6", "Привезены из Кавказа, самые свежие");
 
         searchEngine.add(one);
         searchEngine.add(two);
@@ -59,8 +59,25 @@ public class App {
         System.out.println(Arrays.toString(searchEngine.search("Свежие")));
         System.out.println(Arrays.toString(searchEngine.search("помидор")));
 
+        try {
+            SimpleProduct mistakeOne = new SimpleProduct("Сахар", 0);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Ошибка: " + e.getMessage());
+        }
+        try {
+            DiscountedProduct mistakeTwo = new DiscountedProduct("Печенье", 31, 125);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Ошибка: " + e.getMessage());
+        }
 
+        try {
+            Searchable result = searchEngine.searchable("Хлеб");
+            System.out.println(result.searchTerm());
 
-
+            Searchable notFound = searchEngine.searchable("Банан");
+        } catch (BestResultNotFound e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
+

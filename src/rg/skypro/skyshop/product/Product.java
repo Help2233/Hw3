@@ -20,6 +20,12 @@ public abstract class Product implements Searchable {
 
     }
 
+    public void productVerification(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Нет такого продукта");
+        }
+    }
+
     @Override
     public String toString() {
         return name;
